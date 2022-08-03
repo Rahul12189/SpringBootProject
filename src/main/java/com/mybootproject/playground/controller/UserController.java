@@ -35,4 +35,9 @@ public class UserController {
 		String username = principal.getName();
 		return userRepository.getByUsername(username);
 	}
+	
+	@GetMapping("/hello")  
+	public String display() {
+		return "Hello World. I am Working fine";
+	}
 }
